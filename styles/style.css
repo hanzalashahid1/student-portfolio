@@ -1,6 +1,10 @@
 /* Shared CSS File */
-/*Page Setup */
-/* ====== NAVIGATION BAR STYLES ====== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+  color: #222;
+}
 
 header {
   background-color: #222;
@@ -39,17 +43,12 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #0078ff;
-  color: #fff;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
   background-color: #0078ff;
   color: #fff;
 }
 
-/* ====== RESPONSIVE NAVIGATION ====== */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -60,14 +59,7 @@ nav ul li a.active {
     font-size: 1.6rem;
   }
 }
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #f8f9fa, #e3f2fd);
-  color: #222;
-}
 
-/* Section Layout */
 .about-section {
   padding: 60px 20px;
 }
@@ -85,7 +77,6 @@ body {
   padding: 40px;
 }
 
-/* Image Styling  */
 .about-image img {
   width: 260px;
   height: 260px;
@@ -100,7 +91,6 @@ body {
   transform: scale(1.05);
 }
 
-/*  Content Styling */
 .about-content {
   flex: 1;
 }
@@ -118,7 +108,6 @@ body {
   color: #444;
 }
 
-/*  Education Section */
 .education-section {
   background: #e3f2fd;
   padding: 20px;
@@ -150,6 +139,68 @@ body {
   background-color: #f1faff;
 }
 
+#projects {
+  padding: 2rem;
+  text-align: center;
+}
+
+.project {
+  background-color: #fff;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  color: #2b2b2b;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.skills-table th,
+.skills-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.soft-skills {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+footer {
+  background-color: #2b2b2b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   .about-container {
@@ -164,5 +215,39 @@ body {
 
   .about-content h2 {
     font-size: 1.8rem;
+  }
+
+  .project {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-table,
+  .skills-table thead,
+  .skills-table tbody,
+  .skills-table th,
+  .skills-table td,
+  .skills-table tr {
+    display: block;
+  }
+
+  .skills-table tr {
+    margin-bottom: 1rem;
+  }
+
+  .skills-table td {
+    border: none;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .skills-table td::before {
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    content: attr(data-label);
   }
 }
