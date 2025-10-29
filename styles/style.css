@@ -34,6 +34,7 @@
     width: 95%;
   }
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -78,9 +79,63 @@ footer {
   width: 100%;
 }
 
-/* Responsive */
+/* Responsive Nav */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
+  }
+}
+
+/* layout container */
+.container {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+/* skills table */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.skills-table th,
+.skills-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* soft skills list */
+.soft-skills {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* media query for skills table responsiveness */
+@media (max-width: 600px) {
+  .skills-table,
+  .skills-table thead,
+  .skills-table tbody,
+  .skills-table th,
+  .skills-table td,
+  .skills-table tr {
+    display: block;
+  }
+  .skills-table tr {
+    margin-bottom: 1rem;
+  }
+  .skills-table td {
+    border: none;
+    padding-left: 50%;
+    position: relative;
+  }
+  .skills-table td::before {
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    content: attr(data-label);
   }
 }
