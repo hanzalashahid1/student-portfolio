@@ -1,1 +1,168 @@
 /* Shared CSS File */
+/*Page Setup */
+/* ====== NAVIGATION BAR STYLES ====== */
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0078ff;
+  color: #fff;
+}
+
+nav ul li a.active {
+  background-color: #0078ff;
+  color: #fff;
+}
+
+/* ====== RESPONSIVE NAVIGATION ====== */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+  color: #222;
+}
+
+/* Section Layout */
+.about-section {
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+/* Image Styling  */
+.about-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #2196f3;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/*  Content Styling */
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+/*  Education Section */
+.education-section {
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.education-section h3 {
+  color: #1565c0;
+  margin-bottom: 15px;
+}
+
+.education-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-section li {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.education-section li:hover {
+  transform: translateX(8px);
+  background-color: #f1faff;
+}
+
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+}
