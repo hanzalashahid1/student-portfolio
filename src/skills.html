@@ -1,1 +1,59 @@
-<!-- Skills Page Placeholder -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Showcase Hub</h1>
+   <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html" >Profile</a></li>
+        <li><a href="projects.html" >Projects</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="about-page">
+      <h2>Skills</h2>
+      <p>Technical & soft skills with proficiency levels.</p>
+    </section>
+
+    <section class="skills-section">
+      <h3>Technical Skills</h3>
+      <table class="skills-table">
+        <thead>
+          <tr><th>Skill</th><th>Level</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>HTML & CSS</td><td>Advanced</td></tr>
+          <tr><td>JavaScript / Node.js</td><td>Intermediate</td></tr>
+          <tr><td>Git & GitHub</td><td>Intermediate</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Soft Skills</h3>
+      <ul class="soft-skills">
+        <li>Team Collaboration — Strong</li>
+        <li>Problem Solving — Strong</li>
+        <li>Time Management — Good</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Showcase Hub</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
